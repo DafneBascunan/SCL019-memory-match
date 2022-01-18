@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+body{
+    background-image:url("img/forest1.jpg");
+    opacity:0.2;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+=======
 .header {
     height: 12rem;
     background-color: #D1FFBD;
@@ -9,4 +17,5 @@
     height: 12rem;
     display: block;
     margin: auto;
+>>>>>>> c69f00e60628fd970ccb837651fe5e9045b511b3
 }
