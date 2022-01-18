@@ -1,11 +1,12 @@
-<<<<<<< HEAD
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
 body{
     background-image:url("img/forest1.jpg");
-    opacity:0.2;
     background-repeat: no-repeat;
     background-size: cover;
-
-=======
+}
 .header {
     height: 12rem;
     background-color: #D1FFBD;
@@ -17,5 +18,31 @@ body{
     height: 12rem;
     display: block;
     margin: auto;
->>>>>>> c69f00e60628fd970ccb837651fe5e9045b511b3
+}
+
+#footer {
+    background-color: white;
+    opacity: 0.6;
+    text-align: center;
+
+}
+
+#addName {
+    background-color: white;
+    opacity: 0.6;
+    font-size: 20px;
+    text-align: center;
+    padding: 3rem;
+    margin: 1rem;
+    width: max-content;
+    border-radius: 20px;
+}
+
+#ash, #pikachu, #eevee {
+    height: 300px;
+
+}
+
+.image {
+    display: inline;
 }
