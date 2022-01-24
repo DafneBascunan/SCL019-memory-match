@@ -26,6 +26,8 @@ body{
     opacity: 0.6;
     text-align: center;
     font-size:20px;
+    position: relative;
+    top: 400px;
 
 }
 
@@ -45,11 +47,38 @@ body{
 #nameInput {
     height: 1rem;
 }
-#ash, #pikachu, #eevee {
+#ash{
     height: 300px;
+    position: relative;
+    left: 200px;
+    top: 250px;
 
 }
 
+#pikachu, #eevee{
+    height: 500px;
+    position: relative;
+    left: 500px;
+    top: 250px;
+
+}
+
+
 .image {
     display: inline;
+}
+
+#welcome{
+    background-color: white;
+    opacity: 0.6;
+    font-size: 30px;
+    text-align: center;
+    padding: 3rem;
+    margin: 1rem;
+    width: max-content;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
