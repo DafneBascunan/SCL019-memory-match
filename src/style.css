@@ -27,7 +27,7 @@ body{
     text-align: center;
     font-size:20px;
     position: relative;
-    top: 400px;
+    top: 1rem;
 
 }
 
@@ -48,18 +48,18 @@ body{
     height: 1rem;
 }
 #ash{
-    height: 300px;
+    height: 400px;
     position: relative;
-    left: 200px;
-    top: 250px;
+    left: 2rem;
+    top: auto;
 
 }
 
 #pikachu, #eevee{
-    height: 500px;
+    height: 300px;
     position: relative;
-    left: 500px;
-    top: 250px;
+    left: 2rem;
+    top: auto;
 
 }
 
@@ -70,10 +70,10 @@ body{
 
 #welcome{
     background-color: white;
-    opacity: 0.6;
-    font-size: 30px;
+    opacity: 0.8;
+    font-size: 20px;
     text-align: center;
-    padding: 3rem;
+    padding: 1rem;
     margin: 1rem;
     width: max-content;
     border-radius: 20px;
