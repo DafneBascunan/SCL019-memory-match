@@ -9,14 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Header -->
     <header class="header" id="header">
       <img src="img/logoPage.png" alt="Logo Pokémon Memory Match" id="logoPage" >
     </header>
-
+    <!-- Header -->
+    <!-- Primera página -->
     <div id="welcome"> 
-      <p>Bienvenidos a Pokémon Memory Match</p>
-      <p>Escoge tu personaje para comenzar a jugar</p>
-    
+      <div id="addName">
+        <p>Ingresa tu nombre:</p>
+        <input type="text" id="nameInput" autocomplete="off" placeholder="Nombre">
+      </div>
       <div class="image">
           <img src="img/ash.png" alt="Haz click en Pikachu o Eevee" id="ash">
       </div>
@@ -27,17 +30,28 @@
         <a type="button"><img src="img/eevee.png" alt="Eevee" id="eevee"></a>
       </div>
     </div> 
+    <!-- Primera página -->
+    <!-- Sección Pikachu -->
     <section id="pikachu" >
-      <h1> seccion pikachu</h1>
+      <div class="instructions">Selecciona dos cartas para ver si hacen match.</div>
     </section>
+    <!-- Sección Pikachu -->
+    <!-- Sección Eevee -->
     <section id="eevee">
       <h1>seccion eevee</h1>
     </section>
-    <div id="root"></div>  
+    <!-- Sección Eevee -->
+    <!-- Juego -->
+    <main>
+      <div id="root"></div>
+      <div class="audio"><audio src="audio/pokemon.mp3" autoplau type="audio/mp3" controls loop></audio></div>
+    </main>
+    <!-- Juego -->
+    <!-- Footer -->
     <footer class="footer" id="footer">
       <p>Copyright Pokémon Memory Match 2022</p>
     </footer>
+    <!-- Footer -->
     <script src="main.js" type="module"></script>
-
   </body>
 </html>

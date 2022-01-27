@@ -13,14 +13,30 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
+import pokemon from "../data/pokemon/pokemon.js";
+console.log(pokemon)
+
+let pokemonCard = pokemon.results;
+let root = document.getElementById('root')
+
+window.addEventListener('load', 
 
 const App = () => {
-  const el = document.createElement('div');
+  
+  for (let i = 0; i <= 17; i++) {
+    const card = document.createElement('div');
+    let imageFront = document.createElement('img');
+    let imageBack = document.createElement('img')
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+    card.className = 'App';
+    card.textContent = 'Aquí deberían ir las cartas';
 
-  return el;
+    root.appendChild(card)
+    card.appendChild(imageFront)
+    card.appendChild(imageBack)
+
+  return card;
+  }
 };
 
 export default App;
