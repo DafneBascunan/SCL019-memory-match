@@ -14,11 +14,11 @@
 //   .catch(console.error);
 //
 import pokemon from "../data/pokemon/pokemon.js";
-console.log(pokemon)
+console.log(pokemon);
 
 const pokemonCard = pokemon.items;
 const doubledCards = pokemonCard.concat(pokemonCard);
-let root = document.getElementById('root')
+let root = document.getElementById('root');
 
 let i = doubledCards.length, j, temp;
     while(--i > 0){
@@ -29,24 +29,31 @@ let i = doubledCards.length, j, temp;
     }
 
 const App = () => {
+
+  const cardContainer = document.createElement('div');
+  cardContainer.setAttribute("class", "container");
+  cardContainer.setAttribute("id", "cardContainer");
   
   for (let i = 0; i < doubledCards.length; i++) {
     const card = document.createElement('div');
     let imageFront = document.createElement('img');
-    let imageBack = document.createElement('img')
+    let imageBack = document.createElement('img');
 
     card.className = 'App';
-    root.appendChild(card)
+    root.appendChild(cardContainer)
+    cardContainer.appendChild(card);
 
-    imageBack.setAttribute("src","img/pokemonCard.png" )
-    imageBack.setAttribute("class", "cards")
-    imageBack.setAttribute("alt", "BackCard")
-    card.appendChild(imageBack)
+    imageBack.setAttribute("src","img/pokemonCard.png" );
+    imageBack.setAttribute("class", "cards");
+    imageBack.setAttribute("alt", "BackCard");
+    imageBack.setAttribute("id", "imageBack");
+    card.appendChild(imageBack);
 
     imageFront.setAttribute('src', doubledCards[i].image);
-    imageFront.setAttribute("class", "cards")
+    imageFront.setAttribute("class", "cards");
     imageFront.setAttribute("alt", doubledCards[i].id);
-    card.appendChild(imageFront)
+    imageFront.setAttribute("id", "imageFront")
+    card.appendChild(imageFront);
 
     }
 

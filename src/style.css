@@ -84,13 +84,18 @@ body{
     text-align: center;
 }
 
-.root {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: flex;
-   align-items: center;
-}
-
 #eevee2, #pikachu2 {
     height: 200px;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex;
+    align-items: center;
+    margin: auto;
+ }
+
+ #imageBack {
+     position: absolute;
+ }
