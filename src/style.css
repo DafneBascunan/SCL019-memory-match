@@ -9,14 +9,14 @@ body{
     background-size: cover;
 }
 .header {
-    height: 12rem;
+    height: 7rem;
     background-color: #D1FFBD;
-    padding: 0.5rem;
+    padding: 0.3rem;
     margin: 0 auto;
 }
 
 #logoPage {
-    height: 12rem;
+    height: 6rem;
     display: block;
     margin: auto;
 }
@@ -36,7 +36,7 @@ body{
     opacity: 0.6;
     font-size: 30px;
     text-align: center;
-    padding: 3rem;
+    padding: 2.5rem;
     margin: 1rem;
     width: max-content;
     border-radius: 20px;
@@ -45,7 +45,9 @@ body{
 }
 
 #nameInput {
-    height: 1rem;
+    height: 2rem;
+    width: 300px;
+    border-radius: 10px;
 }
 #ash{
     height: 400px;
@@ -61,6 +63,7 @@ body{
     left: 2rem;
     top: auto;
 
+
 }
 
 
@@ -68,3 +71,26 @@ body{
     display: inline;
 }
 
+.cards {
+    width: 100px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.pikachuUp, .eeveeUp {
+    background-color: white;
+    opacity: 0.6;
+    font-size: 30px;
+    text-align: center;
+}
+
+.root {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex;
+   align-items: center;
+}
+
+#eevee2, #pikachu2 {
+    height: 200px;
+}

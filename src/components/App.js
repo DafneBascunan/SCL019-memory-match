@@ -16,27 +16,42 @@
 import pokemon from "../data/pokemon/pokemon.js";
 console.log(pokemon)
 
-let pokemonCard = pokemon.results;
+const pokemonCard = pokemon.items;
+const doubledCards = pokemonCard.concat(pokemonCard);
 let root = document.getElementById('root')
 
-window.addEventListener('load', 
+let i = doubledCards.length, j, temp;
+    while(--i > 0){
+    j = Math.floor(Math.random() * (i+1))
+    temp = doubledCards[j];
+    doubledCards[j] = doubledCards[i];
+    doubledCards[i] = temp;
+    }
 
 const App = () => {
   
-  for (let i = 0; i <= 17; i++) {
+  for (let i = 0; i < doubledCards.length; i++) {
     const card = document.createElement('div');
     let imageFront = document.createElement('img');
     let imageBack = document.createElement('img')
 
     card.className = 'App';
-    card.textContent = 'Aquí deberían ir las cartas';
-
     root.appendChild(card)
-    card.appendChild(imageFront)
+
+    imageBack.setAttribute("src","img/pokemonCard.png" )
+    imageBack.setAttribute("class", "cards")
+    imageBack.setAttribute("alt", "BackCard")
     card.appendChild(imageBack)
 
-  return card;
-  }
-};
+    imageFront.setAttribute('src', doubledCards[i].image);
+    imageFront.setAttribute("class", "cards")
+    imageFront.setAttribute("alt", doubledCards[i].id);
+    card.appendChild(imageFront)
+
+    }
+
+        
+  };
+
 
 export default App;
