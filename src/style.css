@@ -69,12 +69,26 @@ body{
 
 .image {
     display: inline;
+    text-align: center;
+    position:relative;
+    transform-style: preserve-3ds;
 }
 
-.cards {
+.cards{
+    
     width: 100px;
     border-radius: 10px;
     display: inline-block;
+    position: absolutes;
+
+ 
+   
+
+}
+
+.image:hover .cards {
+    transform:rotateY(180deg);
+
 }
 
 .pikachuUp, .eeveeUp {
@@ -87,15 +101,33 @@ body{
 #eevee2, #pikachu2 {
     height: 200px;
 }
-
-.container {
-    display: flex;
+ 
+.container{
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(6,8rem);
+    grid-template-rows: repeat(4,8rem);
+    grid-gap: 2rem;
+    perspective: 800px;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     justify-content: flex;
-    align-items: center;
-    margin: auto;
+    align-content: space-around;
+    
+
+    
+ }
+ 
+
+     #imageback {
+     background-color: aliceblue;
+     display: grid;
+     position: relative;
+     backface-visibility: hidden;
+
+    
  }
 
- #imageBack {
-     position: absolute;
+ #imagefront{
+     backface-visibility: hidden;
  }

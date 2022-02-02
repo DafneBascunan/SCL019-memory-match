@@ -18,7 +18,6 @@ console.log(pokemon);
 
 const pokemonCard = pokemon.items;
 const doubledCards = pokemonCard.concat(pokemonCard);
-let root = document.getElementById('root');
 
 let i = doubledCards.length, j, temp;
     while(--i > 0){
@@ -40,7 +39,6 @@ const App = () => {
     let imageBack = document.createElement('img');
 
     card.className = 'App';
-    root.appendChild(cardContainer)
     cardContainer.appendChild(card);
 
     imageBack.setAttribute("src","img/pokemonCard.png" );
@@ -56,7 +54,8 @@ const App = () => {
     card.appendChild(imageFront);
 
     }
-
+  
+    return cardContainer
         
   };
 
