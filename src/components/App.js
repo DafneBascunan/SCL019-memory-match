@@ -35,23 +35,21 @@ const App = () => {
   
   for (let i = 0; i < doubledCards.length; i++) {
     const card = document.createElement('div');
-    let imageFront = document.createElement('img');
-    let imageBack = document.createElement('img');
+    let imageFront = document.createElement('img'); 
+    let imageBack = document.createElement('img'); //imagen pokemon//
 
     card.className = 'App';
     cardContainer.appendChild(card);
 
-    imageBack.setAttribute("src","img/pokemonCard.png" );
-    imageBack.setAttribute("class", "cards");
-    imageBack.setAttribute("alt", "BackCard");
-    imageBack.setAttribute("id", "imageBack");
-    card.appendChild(imageBack);
-
-    imageFront.setAttribute('src', doubledCards[i].image);
-    imageFront.setAttribute("class", "cards");
-    imageFront.setAttribute("alt", doubledCards[i].id);
-    imageFront.setAttribute("id", "imageFront")
+    imageFront.setAttribute("src","img/pokemonCard.png" );
+    imageFront.setAttribute("class", "imageFront"); 
+    imageFront.setAttribute("alt", "FrontCard");
     card.appendChild(imageFront);
+
+    imageBack.setAttribute('src', doubledCards[i].image);
+    imageBack.setAttribute("class", "imageBack");
+    imageBack.setAttribute("alt", doubledCards[i].id);
+    card.appendChild(imageBack);
 
     }
   
