@@ -38,7 +38,7 @@ const App = () => {
     let imageFront = document.createElement('img'); 
     let imageBack = document.createElement('img'); //imagen pokemon//
 
-    card.className = 'App';
+    card.className = 'card';
     cardContainer.appendChild(card);
 
     imageFront.setAttribute("src","img/pokemonCard.png" );
@@ -49,13 +49,29 @@ const App = () => {
     imageBack.setAttribute('src', doubledCards[i].image);
     imageBack.setAttribute("class", "imageBack");
     imageBack.setAttribute("alt", doubledCards[i].id);
+    card.setAttribute("id", doubledCards[i].id);
     card.appendChild(imageBack);
 
+    card.addEventListener('click', flipCard);
+
+    function flipCard(){
+      card.classList.add('flip');
     }
-  
-    return cardContainer
+    }
+    let flip = document.getElementsByClassName('flip');
+    if(flip.length === 2){
+      if(flip[0].getAttribute('id') === flip[1].getAttribute('id'))
+      console.log(flip.length)
+        {
         
+      }
+    }
+    
+    return cardContainer;
+
   };
 
 
+  
+ 
 export default App;
