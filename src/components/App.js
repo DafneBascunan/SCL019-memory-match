@@ -1,24 +1,10 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
 import pokemon from "../data/pokemon/pokemon.js";
 console.log(pokemon);
 
 const pokemonCard = pokemon.items;
 const doubledCards = pokemonCard.concat(pokemonCard);
 
+//Barajar las cartas, algoritmo de Fisher-Yates
 let i = doubledCards.length, j, temp;
     while(--i > 0){
     j = Math.floor(Math.random() * (i+1))
@@ -29,10 +15,12 @@ let i = doubledCards.length, j, temp;
 
 const App = () => {
 
+  //Creación de container y sus atributos
   const cardContainer = document.createElement('div');
   cardContainer.setAttribute("class", "container");
   cardContainer.setAttribute("id", "cardContainer");
   
+  //Creación de cartas y sus atributos
   for (let i = 0; i < doubledCards.length; i++) {
     const card = document.createElement('div');
     let imageFront = document.createElement('img'); 
@@ -52,26 +40,42 @@ const App = () => {
     card.setAttribute("id", doubledCards[i].id);
     card.appendChild(imageBack);
 
-    card.addEventListener('click', flipCard);
+    //Darle la clase 'flip' al hacer click
+    card.addEventListener('click', (e) => {
+      card.classList.toggle('flip');
+      checkCards(e);
+    });
 
-    function flipCard(){
-      card.classList.add('flip');
+   };
+   //Función match
+   const checkCards = (e) => {
+     console.log(e);
+     const clickedCard = e.target;
+     clickedCard.classList.add('flipped');
+     const flippedCards = document.querySelectorAll('.flipped');
+     const flip = document.querySelectorAll('.flip')
+      if(flippedCards.length === 2){
+       if(flippedCards[0].getAttribute('id') === flippedCards[1].getAttribute('id')){
+         console.log('match');
+         flippedCards.forEach(card => {
+           card.classList.remove('flipped');
+           card.style.pointerEvents = 'none';
+         })
+       } else{
+         console.log('wrong');
+         flippedCards.forEach((card) => {
+          card.classList.remove('flipped');
+          setTimeout(() => card.classList.remove('flip'), 1000);
+         });
+        }
+        //Alerta al terminar de jugar
+        if(flip.length === 18) {
+          alert('📣¡FELICITACIONES! ¡ATRAPASTE A TODOS LOS POKÉMON! 🏆🎆🥇')
+     }
     }
-    }
-    let flip = document.getElementsByClassName('flip');
-    if(flip.length === 2){
-      if(flip[0].getAttribute('id') === flip[1].getAttribute('id'))
-      console.log(flip.length)
-        {
-        
-      }
-    }
-    
-    return cardContainer;
+   };
+
+      return cardContainer;
 
   };
-
-
-  
- 
 export default App;
