@@ -208,6 +208,30 @@ body{
      transform: scale(1.1);
  }
 
+ #header{
+     display: block;
+ }
+ 
+ #welcome{
+     display: block;
+ }
+
+ #pikachuSection{
+     display: none;
+ }
+
+ #eeveeSection{
+     display: none;
+ }
+
+ #game{
+     display: none;
+ }
+
+ #footer{
+     display: block;
+ }
+
 
 
  
