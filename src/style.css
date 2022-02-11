@@ -160,6 +160,7 @@ body{
     transform-style: preserve-3d;
     border-radius: 7px;
      -webkit-transform:rotateY(180deg);
+     transform: rotateY(180deg);
      border: 1px solid black;
      box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.8); 
  }
