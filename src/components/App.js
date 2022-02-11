@@ -70,7 +70,7 @@ const App = () => {
         }
         //Alerta al terminar de jugar
         if(flip.length === 18) {
-          alert('📣¡FELICITACIONES! ¡ATRAPASTE A TODOS LOS POKÉMON! 🏆🎆🥇')
+          alert('📣¡FELICITACIONES! ¡ATRAPASTE A TODOS LOS POKÉMON! 🏆🎆🥇 Dato curioso: ¿Sabías que el personaje principal del animé "Pokémon", Satoshi (Ash, en EEUU y Latinoamérica) se llama igual que el creador de Pokémon, Satoshi Tajiri?')
      }
     }
    };
