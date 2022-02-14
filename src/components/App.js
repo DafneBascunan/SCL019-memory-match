@@ -1,4 +1,4 @@
-import pokemon from "../data/pokemon/pokemon.js";
+import pokemon from '../data/pokemon/pokemon.js';
 console.log(pokemon);
 
 const pokemonCard = pokemon.items;
@@ -17,8 +17,8 @@ const App = () => {
 
   //Creación de container y sus atributos
   const cardContainer = document.createElement('div');
-  cardContainer.setAttribute("class", "container");
-  cardContainer.setAttribute("id", "cardContainer");
+  cardContainer.setAttribute('class', 'container');
+  cardContainer.setAttribute('id', 'cardContainer');
   
   //Creación de cartas y sus atributos
   for (let i = 0; i < doubledCards.length; i++) {
@@ -29,15 +29,15 @@ const App = () => {
     card.className = 'card';
     cardContainer.appendChild(card);
 
-    imageFront.setAttribute("src","img/pokemonCard.png" );
-    imageFront.setAttribute("class", "imageFront"); 
-    imageFront.setAttribute("alt", "FrontCard");
+    imageFront.setAttribute('src','img/pokemonCard.png' );
+    imageFront.setAttribute('class', 'imageFront'); 
+    imageFront.setAttribute('alt', 'FrontCard');
     card.appendChild(imageFront);
 
     imageBack.setAttribute('src', doubledCards[i].image);
-    imageBack.setAttribute("class", "imageBack");
-    imageBack.setAttribute("alt", doubledCards[i].id);
-    card.setAttribute("id", doubledCards[i].id);
+    imageBack.setAttribute('class', 'imageBack');
+    imageBack.setAttribute('alt', doubledCards[i].id);
+    card.setAttribute('id', doubledCards[i].id);
     card.appendChild(imageBack);
 
     //Darle la clase 'flip' al hacer click
@@ -46,7 +46,7 @@ const App = () => {
       checkCards(e);
     });
 
-   };
+   }
    //Función match
    const checkCards = (e) => {
      console.log(e);
