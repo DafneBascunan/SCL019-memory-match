@@ -232,14 +232,14 @@ body{
  }
 
  @media screen and (max-width: 768px){
-     #pikachu{
-         height: 180px;}
+    #pikachu{
+         height: 180px;
+    }
      #eevee{
          height: 180px;
+    }
 
-     }
-
-     .btn-button{
+     .btn-button {
         background-color: whitesmoke;
         font-family: 'Roboto Mono', monospace;
         padding: 10px 20px;
