@@ -38,14 +38,13 @@ body{
     top: 1rem;
 }
 
-#addName {
+#description {
     background-color: white;
     opacity: 0.6;
     font-size: 30px;
     text-align: center;
     padding: 2.5rem;
     margin: 1rem;
-    width: max-content;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -81,8 +80,7 @@ body{
     
 }
 
-
-.pikachuUp, .eeveeUp {
+.instructions {
     background-color: white;
     opacity: 0.6;
     font-size: 30px;
@@ -109,9 +107,8 @@ body{
     margin: auto;
     perspective: 1000px;
 
-
-
 } 
+
   .card{
      display: flex;
      width: 100%;
@@ -140,7 +137,6 @@ body{
     
  }
 
-
  .card-.imageBack{
      background: gainsboro;
      transform: rotateY(180deg);
@@ -164,6 +160,7 @@ body{
      border: 1px solid black;
      box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.8); 
  }
+
  .imageBack{
     background-color: white;
     transform-style:preserve-3d;
@@ -172,7 +169,6 @@ body{
     backface-visibility: hidden;
     border-radius: 5px;
 
-     
  }
  
  .imageFront{
@@ -192,10 +188,9 @@ body{
      transition: 0.2s;
      margin: 40px;
      position: relative;
-     left: 65rem;
+     left: 40rem;
      border: black;
      
-
  }
 
  .btn-button:hover{
@@ -235,6 +230,31 @@ body{
  #footer{
      display: block;
  }
+
+ @media screen and (max-width: 768px){
+     #pikachu{
+         height: 180px;}
+     #eevee{
+         height: 180px;
+
+     }
+
+     .btn-button{
+        background-color: whitesmoke;
+        font-family: 'Roboto Mono', monospace;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        overflow: hidden;
+        transition: 0.2s;
+        border: black;
+     }
+     
+ }
+
+ 
+     
+ 
 
 
 
